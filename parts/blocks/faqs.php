@@ -36,7 +36,7 @@ if ( ! empty( $block['align'] ) ) {
     <div class="container mx-auto flex flex-col items-center px-6 lg:px-0 py-8 lg:py-16 2xl:py-32">
         
         <div class="w-full md:w-5/6 md:mx-1/6 mb-6 xl:mb-12">
-            <h3 class="font-title text-brand-fourth text-3xl lg:text-4xl 2xl:text-5xl"><?php the_field( 'faq_group_title' ); ?></h3>
+            <h3 class="font-title text-brand-main text-3xl lg:text-4xl 2xl:text-5xl"><?php the_field( 'faq_group_title' ); ?></h3>
         </div>
         
         <?php

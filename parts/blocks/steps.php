@@ -34,10 +34,10 @@ if ( ! empty( $block['align'] ) ) {
 
        
 <?php if ( have_rows( 'steps' ) ) : ?>
-    <section class="flex bg-brand-main relative">
+    <section class="flex bg-brand-black text-white relative">
         <div class="absolute inset-0 w-full h-full"></div>
         <!-- <div class="w-full h-auto my-12 lg:my-20 container mx-auto flex flex-row items-start justify-evenly relative"> -->
-        <div class="w-full h-auto my-12 lg:my-20 px-6 container mx-auto grid grid-flow-row-dense sm:grid-cols-2 sm:grid-rows-2 xl:grid-cols-4 xl:grid-rows-1 gap-y-12 xl:gap-0 relative">
+        <div class="w-full h-auto my-12 lg:my-20 px-6 container mx-auto grid grid-flow-row-dense sm:grid-cols-2 sm:grid-rows-2 xl:grid-cols-5 xl:grid-rows-1 gap-y-12 xl:gap-0 relative">
             <?php while ( have_rows( 'steps' ) ) : the_row(); ?>
                 <div class="flex flex-col items-center w-auto">
                     <?php $step_icon_image = get_sub_field( 'step_icon_image' ); ?>

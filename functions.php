@@ -242,6 +242,9 @@ function footer_scripts()
 
     wp_register_script('faqs', get_template_directory_uri() . '/js/faqs.js', array(), '1.0.0'); // Custom scripts
     wp_enqueue_script('faqs'); // Enqueue
+
+	wp_register_script('nav', get_template_directory_uri() . '/js/nav.js', array(), '1.0.0'); // Custom scripts
+    wp_enqueue_script('nav'); // Enqueue
 }
 
 /* ####### Load styles ####### */
@@ -436,9 +439,16 @@ function webokstarter_wp_gravatar ($avatar_defaults)
 
 // Remove and add custom navigation classes - Web Ok
 function add_link_atts($atts, $item) {
-  $atts['class'] = "menu-anchor"; // styles for anchors in menu.
-  $atts['data-title'] = $item->title; // gives menu <a> a data attribute for the title of the page
-  return $atts;
+  	$atts['class'] = "menu-anchor"; // styles for anchors in menu.
+
+	$sep='-';
+	$res = strtolower($item->title);
+	$res = preg_replace('/[^[:alnum:]]/', ' ', $res);
+	$res = preg_replace('/[[:space:]]+/', $sep, $res);
+	$new_title = trim($res, $sep);
+
+	$atts['data-title'] = $new_title; // gives menu <a> a data attribute for the title of the page the above 5 lines make sure there are no spaces and no issues with the url of the data string
+	return $atts;
 }
 
 function clear_nav_menu_item_id($id, $item, $args) {
@@ -482,13 +492,13 @@ function webokstarter_admin_bar_render() {
 /*------------------------------------*\
 	URLs formatted with hyphens(-)
 \*------------------------------------*/
-// function formatUrl($str, $sep='-')
-// {
-//         $res = strtolower($str);
-//         $res = preg_replace('/[^[:alnum:]]/', ' ', $res);
-//         $res = preg_replace('/[[:space:]]+/', $sep, $res);
-//         return trim($res, $sep);
-// }
+function formatString($str, $sep='-')
+{
+        $res = strtolower($str);
+        $res = preg_replace('/[^[:alnum:]]/', ' ', $res);
+        $res = preg_replace('/[[:space:]]+/', $sep, $res);
+        return trim($res, $sep);
+}
 
 /*------------------------------------*\
 	Web Ok - User restrictions - Requires Plugin 'members'

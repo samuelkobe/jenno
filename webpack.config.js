@@ -19,14 +19,14 @@ module.exports = () => {
       // BrowserSync options
       {
         // browse to http://localhost:3000/ during development
-        host: 'dualdesign.local',
+        host: 'jenno.local',
         open: 'external',
         port: 8080,
         notify: false,
         // proxy the Webpack Dev Server endpoint
         // (which should be serving on http://localhost:3100/)
         // through BrowserSync
-        proxy: 'http://dualdesign.local/'
+        proxy: 'http://jenno.local/'
       },
       // plugin options
       {

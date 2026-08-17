@@ -301,7 +301,7 @@
                             "label": "Left tag",
                             "name": "left_header",
                             "type": "text",
-                            "instructions": "Add short header for the left image (Max 48 characters).",
+                            "instructions": "Add short header for the left image (Max 24 characters).",
                             "required": 1,
                             "conditional_logic": [
                                 [
@@ -321,7 +321,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": 48
+                            "maxlength": 24
                         },
                         {
                             "key": "field_62857ba6256c7",
@@ -413,7 +413,7 @@
                             "label": "Right tag",
                             "name": "right_header",
                             "type": "text",
-                            "instructions": "Add short header for the right image (Max 48 characters).",
+                            "instructions": "Add short header for the right image (Max 24 characters).",
                             "required": 1,
                             "conditional_logic": [
                                 [
@@ -433,7 +433,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": 48
+                            "maxlength": 24
                         },
                         {
                             "key": "field_62857bd7256c8",
@@ -561,5 +561,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652915267
+    "modified": 1654565287
 }

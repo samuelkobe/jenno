@@ -29,3 +29,7 @@ nav ul li ul.sub-menu li {
 nav ul li ul.sub-menu li a.menu-anchor {
     @apply flex py-4 px-2 lg:py-0 whitespace-nowrap m-0 lg:text-lg border-none;
 }
+
+nav ul li ul.sub-menu li {
+    @apply lg:pr-0 #{!important};
+}

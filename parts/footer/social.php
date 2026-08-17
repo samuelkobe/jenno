@@ -16,7 +16,7 @@
 			<?php $social_icon_fill = get_sub_field( 'icon_fill' ); ?>
 		<?php endif; ?>
 
-        <a class="flex flex-row items-center mr-4 lg:mx-0 transition-colors duration-300 mb-4 last:mb-0 fill-<?php echo $social_icon_fill; ?> hover:text-brand-third hover:fill-brand-third" href="<?php echo $social_url; ?>" target="_blank" rel="noreferrer">
+        <a class="flex flex-row items-center mr-4 lg:mx-0 transition-colors duration-300 mb-4 last:mb-0 fill-<?php echo $social_icon_fill; ?> hover:text-brand-fourth hover:fill-brand-fourth" href="<?php echo $social_url; ?>" target="_blank" rel="noreferrer">
             <div class="fill-inherit"><?php echo $social_icon; ?></div>
             <p class="ml-4"><?php echo $social_title; ?></p>
         </a>

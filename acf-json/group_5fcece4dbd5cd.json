@@ -43,15 +43,42 @@
             "mime_types": ""
         },
         {
+            "key": "field_629e925cd54cc",
+            "label": "Phone?",
+            "name": "phone_number_toggle",
+            "type": "true_false",
+            "instructions": "Turn the phone number in the footer on or off.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
             "key": "field_61a019d915c90",
             "label": "Phone number",
             "name": "phone_number",
             "type": "number",
             "instructions": "Add the phone number with no other characters. i.e. '1234567890'.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629e925cd54cc",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "35",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -70,9 +97,17 @@
             "type": "text",
             "instructions": "Add the phone number structure. i.e. 123-456-7890, 123.456.7890, or (123) 456-7890. This is used to show the visitors the number.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629e925cd54cc",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "65",
+                "width": "45",
                 "class": "",
                 "id": ""
             },
@@ -83,15 +118,67 @@
             "maxlength": 24
         },
         {
+            "key": "field_629e928bd54cd",
+            "label": "Phone number <b>Off<\/b>",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629e925cd54cc",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "message": "The phone number is toggled <b>'off'<\/b> for the footer of the website.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_629e941afce6d",
+            "label": "Email?",
+            "name": "email_toggle",
+            "type": "true_false",
+            "instructions": "Turn the email in the footer on or off.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
             "key": "field_61a01bd7a8fe8",
             "label": "Contact email link text",
             "name": "contact_email_link_text",
             "type": "text",
             "instructions": "Contact link text. Add something like 'Contact Us'",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629e941afce6d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "35",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -108,9 +195,17 @@
             "type": "email",
             "instructions": "Add the contact email you'd link visitors of the website to use to contact you here.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629e941afce6d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "65",
+                "width": "45",
                 "class": "",
                 "id": ""
             },
@@ -118,6 +213,31 @@
             "placeholder": "email@example.com",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_629e944afce6e",
+            "label": "Email <b>Off<\/b>",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629e941afce6d",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "message": "The email is toggled <strong>'off'<\/strong> for the footer of the website.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_627192012fd87",
@@ -713,5 +833,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652830654
+    "modified": 1654559906
 }

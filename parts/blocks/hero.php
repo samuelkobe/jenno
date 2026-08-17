@@ -59,7 +59,7 @@ if ( ! empty( $block['align'] ) ) {
         
         <?php if ( get_field( 'page_hero' ) == 1 ) : // this checks to see if the page hero is in overlay mode or 50/50 mode.?>
         <section class="flex relative w-full mt-16 lg:mt-0 mb-<?php echo get_field( 'bottom_spacing' ); ?> px-4 xl:px-0 overflow-hidden <?php echo $hero_height ?>">
-            <div class="absolute left-0 top-0 h-full w-full bg-black z-10 opacity-40 pointer-events-none"></div>    
+            <div class="absolute left-0 top-0 h-full w-full bg-black z-10 opacity-50 pointer-events-none"></div>    
 
             <?php if ( get_field( 'background_type' ) == 1 ) : ?>
                 <?php if ( $background_image ) : ?>

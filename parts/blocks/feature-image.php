@@ -41,7 +41,7 @@ if ( ! empty( $block['align'] ) ) {
                 <?php while ( have_rows( 'content' ) ) : the_row(); ?>
 
                     <?php if ( get_sub_field( 'subtitle_toggle' ) == 1 ) : ?>
-                        <h3 class="mb-4 lg:mb-8 font-handwriting text-sm lg:text-lg 2xl:text-xl"><?php the_sub_field( 'subtitle' ); ?></h3>
+                        <h3 class="mb-4 lg:mb-8 font-handwriting text-sm lg:text-4xl 2xl:text-5xl"><?php the_sub_field( 'subtitle' ); ?></h3>
                     <?php endif; ?>
                 
                     <h2 class="mb-2 lg:mb-6 font-title text-4xl lg:text-5xl 2xl:text-6xl"><?php the_sub_field( 'title' ); ?></h2>

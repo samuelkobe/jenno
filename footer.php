@@ -11,15 +11,21 @@
 
 						<div class="w-full md:w-1/4 lg:w-1/6 grow order-2 lg:order-1 mb-8 lg:mb-0">
 							<h3 class="text-lg lg:text-2xl text-white font-title mb-4 lg:mb-6">Reach out</h4>
-							<div class="w-full flex flex-col text-base xl:leading-8">
-								<a class="hover:text-brand-third transition-colors duration-300" href="tel:<?php the_field( 'phone_number', 'option' ); ?>"><?php the_field( 'phone_number_text', 'option' ); ?></a>
-								<a class="hover:text-brand-third transition-colors duration-300" href="mailto:<?php the_field( 'contact_email', 'option' ); ?>?subject=Inquiry from the <?php bloginfo('name'); ?> website" target="_blank"><?php the_field( 'contact_email_link_text', 'option' ); ?></a>
+							<div class="w-auto inline-flex flex-col text-base xl:leading-8">
+
+								<?php if ( get_field( 'phone_number_toggle', 'option' ) == 1 ) : ?>
+									<a class="hover:text-brand-fourth transition-colors duration-300" href="tel:<?php the_field( 'phone_number', 'option' ); ?>"><?php the_field( 'phone_number_text', 'option' ); ?></a>
+								<?php endif; ?>
+								<?php if ( get_field( 'email_toggle', 'option' ) == 1 ) : ?>
+									<a class="hover:text-brand-fourth transition-colors duration-300" href="mailto:<?php the_field( 'contact_email', 'option' ); ?>?subject=Inquiry from the <?php bloginfo('name'); ?> website" target="_blank"><?php the_field( 'contact_email_link_text', 'option' ); ?></a>
+								<?php endif; ?>
+
 							</div>
 						</div>
 
 						<?php // Footer navigation part ?>
 						<div class="w-1/2 md:w-1/4 lg:w-1/6 grow order-3 lg:order-2 mb-8 lg:mb-0">
-							<h3 class="text-lg lg:text-2xl text-white font-title mb-4 lg:mb-6">Support</h4>
+							<h3 class="text-lg lg:text-2xl text-white font-title mb-4 lg:mb-6">Store</h4>
 							<div class="w-full flex flex-col">
 								<?php footer_nav(); ?>
 							</div>
